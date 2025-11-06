@@ -5,7 +5,7 @@ const app = express();
 const apiRouter = require("./routes");
 
 app.get("/", (req, res) => {
-  res.send("Hello, World!");
+  res.send("Hello world");
 });
 
 app.use("/api", apiRouter);
