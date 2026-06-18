@@ -8,6 +8,8 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
+console.log(" currently in infbranch");
+
 app.use("/api", apiRouter);
 
 app.listen(port, () => {
