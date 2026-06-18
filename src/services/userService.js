@@ -1,7 +1,8 @@
 const bcrypt = require("bcryptjs");
+const seedUsers = require("../data/users");
 
-const users = [];
-let nextId = 1;
+const users = [...seedUsers];
+let nextId = Math.max(...users.map((user) => user.id), 0) + 1;
 
 async function createUser({ name, email, password }) {
   const existingUser = users.find((user) => user.email === email);

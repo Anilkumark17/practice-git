@@ -14,6 +14,4 @@ router.get("/me", authenticate, (req, res) => {
   return res.json({ user: req.user });
 });
 
-router.use("/auth", authRouter);
-
 module.exports = router;
