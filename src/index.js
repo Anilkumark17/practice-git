@@ -4,6 +4,8 @@ const { port } = require("./config");
 const app = express();
 const apiRouter = require("./routes");
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
